@@ -23,10 +23,10 @@ Pod::Spec.new do |s|
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
     s.license      = "MIT"
     s.author             = { "cocoa" => "cocoa.zkk@foxmail.com" }
+
     s.ios.deployment_target = "8.0"
-    s.osx.deployment_target = "10.7"
-    s.watchos.deployment_target = "2.0"
-    s.tvos.deployment_target = "9.0"
+
+
     s.source       = { :git => "https://github.com/cocoZ/KKInitializer.git", :tag => s.version }
 
     s.source_files  = "Initializer", "Initializer/*.{h,m}"
