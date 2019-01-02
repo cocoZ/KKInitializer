@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UILabel+KKInitializer.h"
+#import "KKInitializer.h"
 
 @interface ViewController ()
 

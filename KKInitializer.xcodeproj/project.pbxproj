@@ -29,6 +29,7 @@
 		CC9BA97C21D7522E003766DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9BA98A21D7566A003766DE /* UILabel+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+KKInitializer.h"; sourceTree = "<group>"; };
 		CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KKInitializer.m"; sourceTree = "<group>"; };
+		CC9BA99021DC49AF003766DE /* KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKInitializer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +46,7 @@
 		CC9BA96121D7522D003766DE = {
 			isa = PBXGroup;
 			children = (
+				CC9BA98F21DC4925003766DE /* Initializer */,
 				CC9BA98821D75454003766DE /* UIColor */,
 				CC9BA98721D75383003766DE /* UITextView */,
 				CC9BA98621D75291003766DE /* UITextField */,
@@ -122,6 +124,14 @@
 			children = (
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		CC9BA98F21DC4925003766DE /* Initializer */ = {
+			isa = PBXGroup;
+			children = (
+				CC9BA99021DC49AF003766DE /* KKInitializer.h */,
+			);
+			path = Initializer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
