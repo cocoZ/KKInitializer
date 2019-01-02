@@ -13,6 +13,7 @@
 		CC9BA97721D7522E003766DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9BA97621D7522E003766DE /* Assets.xcassets */; };
 		CC9BA97A21D7522E003766DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9BA97821D7522E003766DE /* LaunchScreen.storyboard */; };
 		CC9BA97D21D7522E003766DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA97C21D7522E003766DE /* main.m */; };
+		CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		CC9BA97921D7522E003766DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC9BA97B21D7522E003766DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9BA97C21D7522E003766DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC9BA98A21D7566A003766DE /* UILabel+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+KKInitializer.h"; sourceTree = "<group>"; };
+		CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KKInitializer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,12 @@
 		CC9BA96121D7522D003766DE = {
 			isa = PBXGroup;
 			children = (
+				CC9BA98821D75454003766DE /* UIColor */,
+				CC9BA98721D75383003766DE /* UITextView */,
+				CC9BA98621D75291003766DE /* UITextField */,
+				CC9BA98521D75286003766DE /* UIImage */,
+				CC9BA98421D75269003766DE /* UIButton */,
+				CC9BA98321D7523E003766DE /* UILabel */,
 				CC9BA96C21D7522D003766DE /* KKInitializer */,
 				CC9BA96B21D7522D003766DE /* Products */,
 			);
@@ -69,6 +78,50 @@
 				CC9BA97C21D7522E003766DE /* main.m */,
 			);
 			path = KKInitializer;
+			sourceTree = "<group>";
+		};
+		CC9BA98321D7523E003766DE /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				CC9BA98A21D7566A003766DE /* UILabel+KKInitializer.h */,
+				CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		CC9BA98421D75269003766DE /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		CC9BA98521D75286003766DE /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		CC9BA98621D75291003766DE /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		CC9BA98721D75383003766DE /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		CC9BA98821D75454003766DE /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9BA97221D7522D003766DE /* ViewController.m in Sources */,
+				CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */,
 				CC9BA97D21D7522E003766DE /* main.m in Sources */,
 				CC9BA96F21D7522D003766DE /* AppDelegate.m in Sources */,
 			);
