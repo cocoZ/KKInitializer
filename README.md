@@ -1,6 +1,6 @@
 KKInitializer
 ====
-![](https://img.shields.io/badge/pod-0.0.1-orange.svg) [![](https://img.shields.io/badge/blog-简书-E87040.svg)](https://www.jianshu.com/p/4f75be2e21dc)
+[![](https://img.shields.io/badge/pod-0.0.1-orange.svg)](https://cocoapods.org/pods/KKInitializer) [![](https://img.shields.io/badge/blog-简书-E87040.svg)](https://www.jianshu.com/p/4f75be2e21dc)
 
 常用UI控件的便利构造方法集合
 现支持 UILabel
