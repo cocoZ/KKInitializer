@@ -20,11 +20,11 @@ KKInitializer
 
 Cocoapods
 ----
-全部控件构造方法扩展，
+全部控件构造方法扩展:
 ```
 pod 'KKInitializer'
 ```
-需要其中1个或多个 ,选择使用
+需要其中1个或多个 ,选择使用:
 ```
 pod 'KKInitializer/UILabel+KKInitializer'
 pod 'KKInitializer/UIButton+KKInitializer'
