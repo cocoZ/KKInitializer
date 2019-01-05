@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.1"
-    s.summary      = "基础控件的遍历构造器"
+    s.version      = "0.0.2"
+    s.summary      = "基础控件的便利构造器，包含UILabel+KKInitializer、UIButton+KKInitializer"
 
 
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
@@ -25,17 +25,22 @@ Pod::Spec.new do |s|
     s.author             = { "cocoa" => "cocoa.zkk@foxmail.com" }
 
     s.ios.deployment_target = "8.0"
-
-
+    s.requires_arc = true
     s.source       = { :git => "https://github.com/cocoZ/KKInitializer.git", :tag => s.version }
+
+
 
     s.source_files  = "Initializer", "Initializer/*.{h,m}"
     s.public_header_files = "Initializer/*.h"
+
     s.subspec 'UILabel+KKInitializer' do |ss|
       ss.source_files  = "UILabel", "UILabel/*.{h,m}"
     end
 
-    s.requires_arc = true
+    s.subspec 'UIButton+KKInitializer' do |ss|
+    ss.source_files  = "UIButton", "UIButton/*.{h,m}"
+    end
+
 
 
 

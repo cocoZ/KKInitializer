@@ -10,6 +10,7 @@
 #define KKInitializer_h
 
 #import "UILabel+KKInitializer.h"
+#import "UIButton+KKInitializer.h"
 
 
 #endif /* KKInitializer_h */

@@ -14,6 +14,7 @@
 		CC9BA97A21D7522E003766DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9BA97821D7522E003766DE /* LaunchScreen.storyboard */; };
 		CC9BA97D21D7522E003766DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA97C21D7522E003766DE /* main.m */; };
 		CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */; };
+		CC9BA99321DE0292003766DE /* UIButton+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA99221DE0292003766DE /* UIButton+KKInitializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		CC9BA98A21D7566A003766DE /* UILabel+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+KKInitializer.h"; sourceTree = "<group>"; };
 		CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KKInitializer.m"; sourceTree = "<group>"; };
 		CC9BA99021DC49AF003766DE /* KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKInitializer.h; sourceTree = "<group>"; };
+		CC9BA99121DE0292003766DE /* UIButton+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+KKInitializer.h"; sourceTree = "<group>"; };
+		CC9BA99221DE0292003766DE /* UIButton+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KKInitializer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 		CC9BA98421D75269003766DE /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
+				CC9BA99121DE0292003766DE /* UIButton+KKInitializer.h */,
+				CC9BA99221DE0292003766DE /* UIButton+KKInitializer.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */,
 				CC9BA97D21D7522E003766DE /* main.m in Sources */,
 				CC9BA96F21D7522D003766DE /* AppDelegate.m in Sources */,
+				CC9BA99321DE0292003766DE /* UIButton+KKInitializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

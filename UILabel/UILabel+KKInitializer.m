@@ -10,11 +10,7 @@
 
 @implementation UILabel (KKInitializer)
 
-+ (UILabel *(^)(void))k_init {
-    return ^id() {
-        return [UILabel new];
-    };
-}
+
 
 ///  常用不包含Text的Label
 + (instancetype)kk_labelWithFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
@@ -59,6 +55,11 @@
     return UILabel.k_init().k_text(text).k_font(font).k_textColor(textColor).k_textAlignment(alignment).k_cornerRadius(cornerRadius);
 }
 
++ (UILabel *(^)(void))k_init {
+    return ^id() {
+        return [UILabel new];
+    };
+}
 ///  链式语法设置常用参数
 - (UILabel *(^)(CGRect frame))          k_frame {
     return ^id(CGRect frame) {

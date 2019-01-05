@@ -20,8 +20,14 @@
 
 
     UILabel *label =  [UILabel kk_labelWithText:@"Label构造器" boldFontSize:15 textColor:UIColor.redColor];
-    label.k_cornerRadius(5).k_backgroudColor(UIColor.lightGrayColor).k_frame(CGRectMake(100, 100, 100, 40));
+    label.k_cornerRadius(5).k_backgroudColor(UIColor.lightGrayColor).k_frame(CGRectMake(100, 100, 100, 40)).k_textAlignment(NSTextAlignmentCenter);
     [self.view addSubview:label];
+    
+    UIButton *btn = [UIButton k_btnForCustomTypeWithTitle:@"Button构造器" titleColor:[UIColor whiteColor] fontSize:20];
+    btn.k_bgImgColor([UIColor purpleColor]).k_cornerRadius(5.0f);
+    [self.view addSubview:btn.k_frame(CGRectMake(100, 200, 150, 40))];
+    
+    
 }
 
 
