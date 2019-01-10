@@ -8,7 +8,7 @@ KKInitializer
 代码示例
 ----
 ```
-    UILabel *label =  [UILabel kk_labelWithText:@"Label构造器" boldFontSize:15 textColor:UIColor.redColor];
+    UILabel *label =  [UILabel k_labelWithText:@"Label构造器" boldFontSize:15 textColor:UIColor.redColor];
     label.k_cornerRadius(5).k_backgroudColor(UIColor.lightGrayColor).k_frame(CGRectMake(100, 100, 100, 40));
     [self.view addSubview:label];
 ```
