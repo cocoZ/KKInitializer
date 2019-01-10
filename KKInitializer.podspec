@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.2"
-    s.summary      = "基础控件的便利构造器，包含UILabel+KKInitializer、UIButton+KKInitializer"
+    s.version      = "0.0.4"
+    s.summary      = "基础控件的便利构造器，包含UILabel+KKInitializer、UIButton+KKInitializer, UIImage+KKInitializer, 持续更新ing..."
 
 
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
@@ -33,14 +33,17 @@ Pod::Spec.new do |s|
     s.source_files  = "Initializer", "Initializer/*.{h,m}"
     s.public_header_files = "Initializer/*.h"
 
-    s.subspec 'UILabel+KKInitializer' do |ss|
-      ss.source_files  = "UILabel", "UILabel/*.{h,m}"
+    s.subspec 'UILabel+KKInitializer' do |label|
+      label.source_files  = "UILabel", "UILabel/*.{h,m}"
     end
 
-    s.subspec 'UIButton+KKInitializer' do |ss|
-    ss.source_files  = "UIButton", "UIButton/*.{h,m}"
+    s.subspec 'UIButton+KKInitializer' do |button|
+        button.source_files  = "UIButton", "UIButton/*.{h,m}"
     end
 
+    s.subspec 'UIImage+KKInitializer' do |image|
+        image.source_files = "UIImage", "UIImage/*.{h,m}"
+    end
 
 
 

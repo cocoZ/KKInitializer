@@ -134,7 +134,6 @@
     };
 }
 
-
 - (UIButton *(^)(NSString *title, UIControlState state))k_title_state {
     return ^id(NSString *title, UIControlState state) {
         [self setTitle:title forState:state];

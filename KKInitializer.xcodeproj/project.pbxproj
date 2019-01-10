@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC89ADAE21E496FD006C2952 /* UIImage+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC89ADAD21E496FD006C2952 /* UIImage+KKInitializer.m */; };
 		CC9BA96F21D7522D003766DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA96E21D7522D003766DE /* AppDelegate.m */; };
 		CC9BA97221D7522D003766DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA97121D7522D003766DE /* ViewController.m */; };
 		CC9BA97521D7522D003766DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9BA97321D7522D003766DE /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC89ADAC21E496FD006C2952 /* UIImage+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+KKInitializer.h"; sourceTree = "<group>"; };
+		CC89ADAD21E496FD006C2952 /* UIImage+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KKInitializer.m"; sourceTree = "<group>"; };
 		CC9BA96A21D7522D003766DE /* KKInitializer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKInitializer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9BA96D21D7522D003766DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC9BA96E21D7522D003766DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 		CC9BA98521D75286003766DE /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				CC89ADAC21E496FD006C2952 /* UIImage+KKInitializer.h */,
+				CC89ADAD21E496FD006C2952 /* UIImage+KKInitializer.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC89ADAE21E496FD006C2952 /* UIImage+KKInitializer.m in Sources */,
 				CC9BA97221D7522D003766DE /* ViewController.m in Sources */,
 				CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */,
 				CC9BA97D21D7522E003766DE /* main.m in Sources */,

@@ -11,6 +11,7 @@
 
 #import "UILabel+KKInitializer.h"
 #import "UIButton+KKInitializer.h"
+#import "UIImage+KKInitializer.h"
 
 
 #endif /* KKInitializer_h */
