@@ -18,10 +18,10 @@ KKInitializer
     [self.view addSubview:btn.k_frame(CGRectMake(100, 200, 150, 40))];
 ```
 ```
-    UIImage *i = UIImage.k_imgFillColor(UIColor.redColor, CGSizeMake(100, 100)).k_cornerRadius(5.0f);
-    UIImageView *img = [[UIImageView alloc] initWithImage:i];
-    img.frame = CGRectMake(100, 400, 100, 100);
-    [self.view addSubview:img];
+    UIImage *img = UIImage.k_imgFillColor(UIColor.redColor, CGSizeMake(100, 100)).k_cornerRadius(5.0f);
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
+    imgView.frame = CGRectMake(100, 400, 100, 100);
+    [self.view addSubview:imgView];
 ```
 
 Cocoapods
