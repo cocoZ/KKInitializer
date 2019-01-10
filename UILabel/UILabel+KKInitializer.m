@@ -13,26 +13,26 @@
 
 
 ///  常用不包含Text的Label
-+ (instancetype)kk_labelWithFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
-    return [self kk_labelWithText:nil fontSize:fontSize textColor:textColor];
++ (instancetype)k_labelWithFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
+    return [self k_labelWithText:nil fontSize:fontSize textColor:textColor];
 }
-+ (instancetype)kk_labelWithBoldFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
-    return [self kk_labelWithText:nil boldFontSize:fontSize textColor:textColor];
++ (instancetype)k_labelWithBoldFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
+    return [self k_labelWithText:nil boldFontSize:fontSize textColor:textColor];
 }
-+ (instancetype)kk_labelWithFont:(UIFont *)font textColor:(UIColor *)textColor {
-    return [self kk_labelWithText:nil font:font textColor:textColor];
++ (instancetype)k_labelWithFont:(UIFont *)font textColor:(UIColor *)textColor {
+    return [self k_labelWithText:nil font:font textColor:textColor];
 }
 
 ///  常用包含Text的Label
-+ (instancetype)kk_labelWithText:(NSString *)text fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
++ (instancetype)k_labelWithText:(NSString *)text fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
     UIFont *font = [UIFont systemFontOfSize:fontSize];
-    return [self kk_labelWithText:text font:font textColor:textColor];
+    return [self k_labelWithText:text font:font textColor:textColor];
 }
-+ (instancetype)kk_labelWithText:(NSString *)text boldFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
++ (instancetype)k_labelWithText:(NSString *)text boldFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
     UIFont *font = [UIFont boldSystemFontOfSize:fontSize];
-    return [self kk_labelWithText:text font:font textColor:textColor];
+    return [self k_labelWithText:text font:font textColor:textColor];
 }
-+ (instancetype)kk_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor {
++ (instancetype)k_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor {
     
     UILabel *l = [UILabel new];
     l.text = text;
@@ -43,14 +43,14 @@
 }
 
 ///  携带字体名字的Label
-+ (instancetype)kk_labelWithFontName:(NSString *)fontName fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
++ (instancetype)k_labelWithFontName:(NSString *)fontName fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
     UIFont *font = [UIFont fontWithName:fontName size:fontSize];
-    return [self kk_labelWithText:nil font:font textColor:textColor];
+    return [self k_labelWithText:nil font:font textColor:textColor];
 }
 
 
 ///  全部参数构造器
-+ (instancetype)kk_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)alignment cornerRadius:(CGFloat)cornerRadius {
++ (instancetype)k_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)alignment cornerRadius:(CGFloat)cornerRadius {
     
     return UILabel.k_init().k_text(text).k_font(font).k_textColor(textColor).k_textAlignment(alignment).k_cornerRadius(cornerRadius);
 }

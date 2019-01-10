@@ -13,36 +13,36 @@
 @interface UILabel (KKInitializer)
 
 ///  常用不包含Text的构造器
-+ (instancetype)kk_labelWithFontSize:(CGFloat)fontSize
++ (instancetype)k_labelWithFontSize:(CGFloat)fontSize
                            textColor:(UIColor *)textColor;
 
-+ (instancetype)kk_labelWithBoldFontSize:(CGFloat)fontSize
++ (instancetype)k_labelWithBoldFontSize:(CGFloat)fontSize
                                textColor:(UIColor *)textColor;
 
-+ (instancetype)kk_labelWithFont:(UIFont *)font
++ (instancetype)k_labelWithFont:(UIFont *)font
                        textColor:(UIColor *)textColor;
 
 ///  常用包含Text的构造器
-+ (instancetype)kk_labelWithText:(NSString *)text
++ (instancetype)k_labelWithText:(NSString *)text
                         fontSize:(CGFloat)fontSize
                        textColor:(UIColor *)textColor;
 
-+ (instancetype)kk_labelWithText:(NSString *)text
++ (instancetype)k_labelWithText:(NSString *)text
                     boldFontSize:(CGFloat)fontSize
                        textColor:(UIColor *)textColor;
 
-+ (instancetype)kk_labelWithText:(NSString *)text
++ (instancetype)k_labelWithText:(NSString *)text
                             font:(UIFont *)font
                        textColor:(UIColor *)textColor;
 
 ///  携带字体名字的构造器
-+ (instancetype)kk_labelWithFontName:(NSString *)fontName
++ (instancetype)k_labelWithFontName:(NSString *)fontName
                             fontSize:(CGFloat)fontSize
                            textColor:(UIColor *)textColor;
 
 
 ///  全-参数构造器
-+ (instancetype)kk_labelWithText:(NSString *)text
++ (instancetype)k_labelWithText:(NSString *)text
                             font:(UIFont *)font
                        textColor:(UIColor *)textColor
                    textAlignment:(NSTextAlignment)alignment

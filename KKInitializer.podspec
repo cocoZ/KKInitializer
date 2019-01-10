@@ -16,13 +16,13 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.4"
+    s.version      = "0.0.5"
     s.summary      = "基础控件的便利构造器，包含UILabel+KKInitializer、UIButton+KKInitializer, UIImage+KKInitializer, 持续更新ing..."
 
 
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
     s.license      = "MIT"
-    s.author             = { "cocoa" => "cocoa.zkk@foxmail.com" }
+    s.author       = { "cocoa" => "cocoa.zkk@foxmail.com" }
 
     s.ios.deployment_target = "8.0"
     s.requires_arc = true
