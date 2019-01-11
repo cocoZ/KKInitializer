@@ -40,6 +40,7 @@ pod 'KKInitializer'
 pod 'KKInitializer/UILabel+KKInitializer'
 pod 'KKInitializer/UIButton+KKInitializer'
 pod 'KKInitializer/UIImage+KKInitializer'
+pod 'KKInitializer/UITextField+KKInitializer'
 ```
 
 
