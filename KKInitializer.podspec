@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'UITextField+KKInitializer' do |textField|
-        imatextFieldge.source_files = "UITextField", "UITextField/*.{h,m}"
+        textField.source_files = "UITextField", "UITextField/*.{h,m}"
     end
 
 
