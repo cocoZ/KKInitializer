@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.5"
-    s.summary      = "基础控件的便利构造器，包含UILabel+KKInitializer、UIButton+KKInitializer, UIImage+KKInitializer, 持续更新ing..."
+    s.version      = "0.0.6"
+    s.summary      = "基础控件的便利构造器，包含UILabel+KKInitializer、UIButton+KKInitializer, UIImage+KKInitializer, UITextField+KKInitializer, 持续更新ing..."
 
 
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
@@ -45,7 +45,9 @@ Pod::Spec.new do |s|
         image.source_files = "UIImage", "UIImage/*.{h,m}"
     end
 
-
+    s.subspec 'UITextField+KKInitializer' do |textField|
+        imatextFieldge.source_files = "UITextField", "UITextField/*.{h,m}"
+    end
 
 
 

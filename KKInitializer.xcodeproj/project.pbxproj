@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC1A1E4621E81F560032C5AA /* UITextField+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1A1E4521E81F560032C5AA /* UITextField+KKInitializer.m */; };
 		CC89ADAE21E496FD006C2952 /* UIImage+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC89ADAD21E496FD006C2952 /* UIImage+KKInitializer.m */; };
 		CC9BA96F21D7522D003766DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA96E21D7522D003766DE /* AppDelegate.m */; };
 		CC9BA97221D7522D003766DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA97121D7522D003766DE /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC1A1E4421E81F560032C5AA /* UITextField+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+KKInitializer.h"; sourceTree = "<group>"; };
+		CC1A1E4521E81F560032C5AA /* UITextField+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KKInitializer.m"; sourceTree = "<group>"; };
 		CC89ADAC21E496FD006C2952 /* UIImage+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+KKInitializer.h"; sourceTree = "<group>"; };
 		CC89ADAD21E496FD006C2952 /* UIImage+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KKInitializer.m"; sourceTree = "<group>"; };
 		CC9BA96A21D7522D003766DE /* KKInitializer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKInitializer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +121,8 @@
 		CC9BA98621D75291003766DE /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
+				CC1A1E4421E81F560032C5AA /* UITextField+KKInitializer.h */,
+				CC1A1E4521E81F560032C5AA /* UITextField+KKInitializer.m */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC89ADAE21E496FD006C2952 /* UIImage+KKInitializer.m in Sources */,
+				CC1A1E4621E81F560032C5AA /* UITextField+KKInitializer.m in Sources */,
 				CC9BA97221D7522D003766DE /* ViewController.m in Sources */,
 				CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */,
 				CC9BA97D21D7522E003766DE /* main.m in Sources */,
