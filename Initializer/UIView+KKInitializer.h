@@ -10,6 +10,7 @@
 
 @interface UIView (KKInitializer)
 
-+ (instancetype(^)(void))k_init;
+//+ (instancetype(^)(void))k_init;
+- (void)kk_test;
 
 @end

@@ -10,10 +10,12 @@
 
 @implementation UIView (KKInitializer)
 
-+ (instancetype (^)(void))k_init {
-    return ^id() {
-        return [[self class] new];
-    };
+//+ (instancetype (^)(void))k_init {
+//    return ^id() {
+//        return [[self class] new];
+//    };
+//}
+- (void)kk_test {
+    NSLog(@"kk_test");
 }
-
 @end

@@ -44,8 +44,8 @@
     [self.view addSubview:textField];
 }
 - (void)addTextView {
-    UITextView *textView = UITextView.k_init();
-    [self.view addSubview:textView];
+//    UITextView *textView = UITextView.k_init();
+//    [self.view addSubview:textView];
     
 }
 
