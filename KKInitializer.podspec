@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.6"
+    s.version      = "0.0.8"
     s.summary      = "基础控件的便利构造器，包含UILabel、UIButton, UIImage, UITextField, 持续更新ing..."
 
 
@@ -30,8 +30,12 @@ Pod::Spec.new do |s|
 
 
 
-    s.source_files  = "Initializer", "Initializer/*.{h,m}"
-    s.public_header_files = "Initializer/*.h"
+    s.source_files  = "Initializer", "Initializer/KKInitializer.h"
+    s.public_header_files = "Initializer/KKInitializer.h"
+
+    s.subspec 'UIView+KKInitializer' do |view|
+    view.source_files  = "Initializer", "Initializer/UIView+KKInitializer.{h,m}"
+    end
 
     s.subspec 'UILabel+KKInitializer' do |label|
       label.source_files  = "UILabel", "UILabel/*.{h,m}"
