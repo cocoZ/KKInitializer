@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.8"
-    s.summary      = "基础控件的便利构造器，包含UILabel、UIButton, UIImage, UITextField, 持续更新ing..."
+    s.version      = "0.0.10"
+    s.summary      = "基础控件的便利构造器，包含UILabel、UIButton、UIImage、UITextField、UITextView 持续更新ing..."
 
 
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
@@ -29,13 +29,9 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/cocoZ/KKInitializer.git", :tag => s.version }
 
 
-
     s.source_files  = "Initializer", "Initializer/KKInitializer.h"
     s.public_header_files = "Initializer/KKInitializer.h"
 
-    s.subspec 'UIView+KKInitializer' do |view|
-    view.source_files  = "Initializer", "Initializer/UIView+KKInitializer.{h,m}"
-    end
 
     s.subspec 'UILabel+KKInitializer' do |label|
       label.source_files  = "UILabel", "UILabel/*.{h,m}"
@@ -51,9 +47,12 @@ Pod::Spec.new do |s|
 
     s.subspec 'UITextField+KKInitializer' do |textField|
         textField.source_files = "UITextField", "UITextField/*.{h,m}"
+        textField.dependency "KKInitializer/UIButton+KKInitializer"
     end
 
-
+    s.subspec 'UITextView+KKInitializer' do |textView|
+        textView.source_files = "UITextView", "UITextView/*.{h,m}"
+    end
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?

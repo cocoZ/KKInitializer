@@ -18,7 +18,6 @@
 		CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA98B21D7566A003766DE /* UILabel+KKInitializer.m */; };
 		CC9BA99321DE0292003766DE /* UIButton+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9BA99221DE0292003766DE /* UIButton+KKInitializer.m */; };
 		CCB4358821E8855A00705AEE /* UITextView+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB4358721E8855A00705AEE /* UITextView+KKInitializer.m */; };
-		CCB4358B21E9ADE300705AEE /* UIView+KKInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB4358A21E9ADE300705AEE /* UIView+KKInitializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +42,6 @@
 		CC9BA99221DE0292003766DE /* UIButton+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KKInitializer.m"; sourceTree = "<group>"; };
 		CCB4358621E8855A00705AEE /* UITextView+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+KKInitializer.h"; sourceTree = "<group>"; };
 		CCB4358721E8855A00705AEE /* UITextView+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+KKInitializer.m"; sourceTree = "<group>"; };
-		CCB4358921E9ADE300705AEE /* UIView+KKInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KKInitializer.h"; sourceTree = "<group>"; };
-		CCB4358A21E9ADE300705AEE /* UIView+KKInitializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KKInitializer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				CC9BA99021DC49AF003766DE /* KKInitializer.h */,
-				CCB4358921E9ADE300705AEE /* UIView+KKInitializer.h */,
-				CCB4358A21E9ADE300705AEE /* UIView+KKInitializer.m */,
 			);
 			path = Initializer;
 			sourceTree = "<group>";
@@ -233,7 +228,6 @@
 				CC89ADAE21E496FD006C2952 /* UIImage+KKInitializer.m in Sources */,
 				CC1A1E4621E81F560032C5AA /* UITextField+KKInitializer.m in Sources */,
 				CC9BA97221D7522D003766DE /* ViewController.m in Sources */,
-				CCB4358B21E9ADE300705AEE /* UIView+KKInitializer.m in Sources */,
 				CC9BA98D21D7779A003766DE /* UILabel+KKInitializer.m in Sources */,
 				CC9BA97D21D7522E003766DE /* main.m in Sources */,
 				CC9BA96F21D7522D003766DE /* AppDelegate.m in Sources */,
@@ -388,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoa.KKInitializer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
 		};
@@ -404,6 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoa.KKInitializer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
 		};

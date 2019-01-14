@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "KKInitializer.h"
-#import "UIView+KKInitializer.h"
 
 @interface ViewController ()
 
@@ -19,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self addTextField];
+    [self addTextView];
 }
 - (void)addLabel {
     UILabel *label =  [UILabel k_labelWithText:@"Label构造器" boldFontSize:15 textColor:UIColor.redColor];
@@ -44,8 +43,8 @@
     [self.view addSubview:textField];
 }
 - (void)addTextView {
-//    UITextView *textView = UITextView.k_init();
-//    [self.view addSubview:textView];
+    UITextView *textView = UITextView.k_init();
+    [self.view addSubview:textView];
     
 }
 
