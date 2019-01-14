@@ -17,9 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self addTextView];
+    
+    [self testColor];
 }
+
 - (void)addLabel {
     UILabel *label =  [UILabel k_labelWithText:@"Label构造器" boldFontSize:15 textColor:UIColor.redColor];
     label.k_cornerRadius(5).k_backgroudColor(UIColor.lightGrayColor).k_frame(CGRectMake(100, 100, 100, 40)).k_textAlignment(NSTextAlignmentCenter);
@@ -43,9 +44,16 @@
     [self.view addSubview:textField];
 }
 - (void)addTextView {
-    UITextView *textView = UITextView.k_init();
+    UITextView *textView = UITextView.k_init().k_textColor(UIColor.redColor).k_boldFontSize(15.f);
     [self.view addSubview:textView];
-    
+}
+
+- (void)testColor {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    view.backgroundColor = UIColor.k_hexColor(0xFF3300);
+    view.backgroundColor = UIColor.k_RGBColor(255,121,0);
+    view.backgroundColor = UIColor.k_randomColor();
+    [self.view addSubview:view];
 }
 
 

@@ -14,6 +14,7 @@
 #import "UIImage+KKInitializer.h"
 #import "UITextField+KKInitializer.h"
 #import "UITextView+KKInitializer.h"
+#import "UIColor/UIColor+KKInitializer.h"
 
 
 #endif /* KKInitializer_h */
