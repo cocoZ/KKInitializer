@@ -3,7 +3,7 @@ KKInitializer
 [![](https://img.shields.io/badge/pod-0.0.1-orange.svg)](https://cocoapods.org/pods/KKInitializer) [![](https://img.shields.io/badge/blog-简书-E87040.svg)](https://www.jianshu.com/p/e6ef1df5dd9a)
 
 常用UI控件的便利构造方法集合
-现支持 UILabel/UIButton/UIImage/UITextField/UITextView 持续更新ing
+现支持 UILabel/UIButton/UIImage/UITextField/UITextView/UIColor等
 
 代码示例
 ----
@@ -32,6 +32,13 @@ KKInitializer
     UITextView *textView = UITextView.k_init().k_textColor(UIColor.redColor).k_boldFontSize(15.f);
     [self.view addSubview:textView];
 ```
+```objectivec
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    view.backgroundColor = UIColor.k_hexColor(0xFF3300);
+    view.backgroundColor = UIColor.k_RGBColor(255,121,0);
+    view.backgroundColor = UIColor.k_randomColor();
+    [self.view addSubview:view];
+```
 
 Cocoapods
 ----
@@ -46,6 +53,7 @@ pod 'KKInitializer/UIButton+KKInitializer'
 pod 'KKInitializer/UIImage+KKInitializer'
 pod 'KKInitializer/UITextField+KKInitializer'
 pod 'KKInitializer/UITextView+KKInitializer'
+pod 'KKInitializer/UIColor+KKInitializer'
 ```
 
 
