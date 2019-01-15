@@ -54,6 +54,11 @@
     view.backgroundColor = UIColor.k_RGBColor(255,121,0);
     view.backgroundColor = UIColor.k_randomColor();
     [self.view addSubview:view];
+    
+    UILabel *titleLabel = UILabel.k_init();
+    UILabel *descLabel  = UILabel.k_init();
+    titleLabel.k_textColor(UIColor.k_t1Color);
+    descLabel.k_textColor(UIColor.k_t2Color);
 }
 
 

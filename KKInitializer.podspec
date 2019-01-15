@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.0.11"
-    s.summary      = "基础控件的便利构造器，包含UILabel、UIButton、UIImage、UITextField、UITextView 持续更新ing..."
+    s.version      = "0.1"
+    s.summary      = "基础控件的便利构造器，包含UILabel、UIButton、UIImage、UITextField、UITextView、UIColor等"
 
 
     s.homepage     = "https://github.com/cocoZ/KKInitializer"
@@ -52,6 +52,10 @@ Pod::Spec.new do |s|
 
     s.subspec 'UITextView+KKInitializer' do |textView|
         textView.source_files = "UITextView", "UITextView/*.{h,m}"
+    end
+
+    s.subspec 'UIColor+KKInitializer' do |color|
+        color.source_files = "UIColor", "UIColor/*.{h,m}"
     end
 
   # This description is used to generate tags and improve search results.

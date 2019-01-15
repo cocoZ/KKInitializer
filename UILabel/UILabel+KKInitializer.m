@@ -60,6 +60,11 @@
         return [UILabel new];
     };
 }
++ (UILabel *(^)(CGRect))k_initFrame {
+    return ^id(CGRect frame) {
+        return [[UILabel alloc] initWithFrame:frame];
+    };
+}
 ///  链式语法设置常用参数
 - (UILabel *(^)(CGRect frame))          k_frame {
     return ^id(CGRect frame) {

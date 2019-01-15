@@ -50,6 +50,7 @@
 
 
 + (UILabel *(^)(void))k_init;
++ (UILabel *(^)(CGRect frame))k_initFrame;
 ///  链式语法设置常用参数
 - (UILabel *(^)(CGRect frame))          k_frame;
 - (UILabel *(^)(NSString *text))        k_text;
