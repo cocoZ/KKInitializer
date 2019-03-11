@@ -58,7 +58,7 @@ static UIColor *kk_t4Color = nil;
     return ^id(NSInteger hex) {
         CGFloat r = (((hex) & 0xFF0000) >> 16) / 255.0f;
         CGFloat g = ((hex & 0xFF00) >> 8) / 255.0f;
-        CGFloat b = ((hex & 0xFF) >> 4) / 255.0f;
+        CGFloat b = (hex & 0xFF) / 255.0f;
         return UIColor.k_RGBColor(r,g,b);
     };
 }
