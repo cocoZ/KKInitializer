@@ -53,7 +53,7 @@
 
 + (UIButton *(^)(void))k_init {
     return ^id() {
-        return [UIButton new];
+        return UIButton.k_initType(UIButtonTypeSystem);
     };
 }
 

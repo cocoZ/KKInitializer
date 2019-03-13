@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "0.1"
+    s.version      = "1.0.2"
     s.summary      = "链式语法式基础控件的便利构造器，包含UILabel、UIButton、UIImage、UITextField、UITextView、UIColor等"
 
 
