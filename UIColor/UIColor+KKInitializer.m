@@ -8,10 +8,14 @@
 
 #import "UIColor+KKInitializer.h"
 
+static UIColor *kk_mainColor = nil;
+static UIColor *kk_backgroundColor = nil;
+static UIColor *kk_lineColor = nil;
 static UIColor *kk_t1Color = nil;
 static UIColor *kk_t2Color = nil;
 static UIColor *kk_t3Color = nil;
 static UIColor *kk_t4Color = nil;
+static UIColor *kk_placeholderColor = nil;
 
 @implementation UIColor (KKInitializer)
 
@@ -27,6 +31,38 @@ static UIColor *kk_t4Color = nil;
     }
 }
 
++ (void)setColor_mainColor:(UIColor *)mainColor
+          _backgroundColor:(UIColor *)backgroundColor
+                _lineColor:(UIColor *)lineColor
+                  _t1Color:(UIColor *)t1Color
+                  _t2Color:(UIColor *)t2Color
+                  _t3Color:(UIColor *)t3Color
+         _placeholderColor:(UIColor *)placeholderColor {
+    @synchronized (self) {
+        
+        kk_mainColor = mainColor;
+        kk_backgroundColor = backgroundColor;
+        kk_lineColor = lineColor;
+        kk_t1Color = mainColor;
+        kk_t2Color = t2Color;
+        kk_t3Color = t3Color;
+        kk_placeholderColor = placeholderColor;
+    }
+}
+
+///  背景色
++ (UIColor *)k_backgroundColor {
+    return kk_backgroundColor ?: [UIColor whiteColor];
+}
+///  线条颜色
++ (UIColor *)k_lineColor {
+    return kk_lineColor ?: UIColor.lightGrayColor;
+}
+///  主色调
++ (UIColor *)k_mainColor {
+    return kk_mainColor ?: UIColor.blueColor;
+}
+
 ///  文本主要颜色 default: Black
 + (UIColor *)k_t1Color {
     return kk_t1Color ?: [UIColor blackColor];
@@ -40,6 +76,9 @@ static UIColor *kk_t4Color = nil;
     return kk_t3Color ?: [UIColor grayColor];
 }
 ///  占位符颜色   default: lightGray
++ (UIColor *)k_placeholderColor {
+    return kk_placeholderColor ?: [UIColor lightGrayColor];
+}
 + (UIColor *)k_t4Color {
     return kk_t4Color ?: [UIColor lightGrayColor];
 }
@@ -70,6 +109,12 @@ static UIColor *kk_t4Color = nil;
         CGFloat b = arc4random() % 256 / 255.f;
         return UIColor.k_RGBColor(r,g,b);
     };
+}
++ (UIColor *)kRandomColor {
+    CGFloat r = arc4random() % 256 / 255.f;
+    CGFloat g = arc4random() % 256 / 255.f;
+    CGFloat b = arc4random() % 256 / 255.f;
+    return UIColor.k_RGBColor(r,g,b);
 }
 
 @end
