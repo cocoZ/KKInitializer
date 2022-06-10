@@ -20,6 +20,7 @@
 
 ///  systom font
 - (UITextField *(^)(CGFloat fontSize))k_fontSize;
+- (UITextField *(^)(CGFloat mediumFontSize))k_mediumFontSize;
 - (UITextField *(^)(CGFloat boldFontSize))k_boldFontSize;
 - (UITextField *(^)(UIFont *font))k_font;
 

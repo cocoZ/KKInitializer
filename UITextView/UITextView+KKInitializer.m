@@ -51,6 +51,12 @@
         return self.k_font(font);
     };
 }
+- (UITextView *(^)(CGFloat mediumFontSize))k_mediumFontSize {
+    return ^id(CGFloat mediumFontSize) {
+        UIFont *font = [UIFont systemFontOfSize:mediumFontSize weight:UIFontWeightMedium];
+        return self.k_font(font);
+    };
+}
 - (UITextView *(^)(CGFloat))k_boldFontSize {
     return ^id(CGFloat boldFontSize) {
         UIFont *font = [UIFont boldSystemFontOfSize:boldFontSize];

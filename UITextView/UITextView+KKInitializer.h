@@ -19,6 +19,7 @@
 - (UITextView *(^)(NSTextAlignment textAlignment))k_textAlignment;
 
 - (UITextView *(^)(CGFloat fontSize))k_fontSize;
+- (UITextView *(^)(CGFloat mediumFontSize))k_mediumFontSize;
 - (UITextView *(^)(CGFloat boldFontSize))k_boldFontSize;
 - (UITextView *(^)(UIFont *font))k_font;
 

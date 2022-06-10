@@ -15,7 +15,8 @@
 ///  load from mainBundle path
 + (UIImage *(^)(NSString *imgName))k_fileImgName;
 
-+ (UIImage *(^)(UIColor *imgFillColor, CGSize imgSize))k_imgFillColor;
++ (UIImage *(^)(UIColor *imgFillColor))k_imgFillColor;
++ (UIImage *(^)(UIColor *imgFillColor, CGSize imgSize))k_imgFillColor_size;
 
 - (UIImage *(^)(CGFloat cornerRadius))k_cornerRadius;
 

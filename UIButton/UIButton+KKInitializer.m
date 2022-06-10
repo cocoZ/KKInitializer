@@ -56,7 +56,16 @@
         return UIButton.k_initType(UIButtonTypeSystem);
     };
 }
-
++ (UIButton *)k_systemBtn {
+//    return ^id() {
+        return [UIButton buttonWithType:UIButtonTypeSystem];
+//    };
+}
++ (UIButton *)k_customBtn {
+//    return ^id() {
+        return [UIButton buttonWithType:UIButtonTypeCustom];
+//    };
+}
 + (UIButton *(^)(UIButtonType type))k_initType {
     return ^id(UIButtonType type) {
         return [UIButton buttonWithType:type];
@@ -69,7 +78,21 @@
         return self;
     };
 }
-
+- (UIButton *(^)(CGFloat fSize))k_fontSize {
+    return ^id(CGFloat fSize) {
+        return self.k_font([UIFont systemFontOfSize:fSize]);
+    };
+}
+- (UIButton *(^)(CGFloat mediumFSize))k_mediumFontSize {
+    return ^id(CGFloat mediumFSize) {
+        return self.k_font([UIFont systemFontOfSize:mediumFSize weight:UIFontWeightMedium]);
+    };
+}
+- (UIButton *(^)(CGFloat boldFSize))k_boldFontSize {
+    return ^id(CGFloat boldFSize) {
+        return self.k_font([UIFont boldSystemFontOfSize:boldFSize]);
+    };
+}
 - (UIButton *(^)(UIFont *))k_font {
     return ^id(UIFont *font) {
         if (font) {
@@ -88,21 +111,7 @@
         return self;
     };
 }
-///  根据颜色生成image, 设置UIButton的backgroundImage, 有点击背景变暗效果
-- (UIButton *(^)(UIColor *bgImgColor))k_bgImgColor {
-    return ^id(UIColor *bgImgColor) {
-        
-        CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-        UIGraphicsBeginImageContext(rect.size);
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSetFillColorWithColor(context, [bgImgColor CGColor]);
-        CGContextFillRect(context, rect);
-        UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        return self.k_bgImg(theImage);
-    };
-}
+
 
 - (UIButton *(^)(CGFloat cornerRadius))k_cornerRadius {
     return ^id(CGFloat cornerRadius) {
@@ -123,11 +132,7 @@
         return self.k_titleColor_state(color, UIControlStateNormal);
     };
 }
-- (UIButton *(^)(UIImage *image))k_img {
-    return ^id(UIImage *img) {
-        return self.k_img_state(img, UIControlStateNormal);
-    };
-}
+
 - (UIButton *(^)(UIImage *backgroudImg))k_bgImg {
     return ^id(UIImage *img) {
         return self.k_bgImg_state(img, UIControlStateNormal);
@@ -148,6 +153,22 @@
         return self;
     };
 }
+
+- (UIButton *(^)(NSString *imgName))k_imgName {
+    return ^id(NSString *imgName) {
+        return self.k_img([UIImage imageNamed:imgName]);
+    };
+}
+- (UIButton *(^)(UIImage *image))k_img {
+    return ^id(UIImage *img) {
+        return self.k_img_state(img, UIControlStateNormal);
+    };
+}
+- (UIButton *(^)(NSString *imgName, UIControlState state))k_imgName_state {
+    return ^id(NSString *imgName, UIControlState state) {
+        return self.k_img_state([UIImage imageNamed:imgName], state);
+    };
+}
 - (UIButton *(^)(UIImage *img, UIControlState state))k_img_state {
     return ^id(UIImage *img, UIControlState state) {
         if (img) {
@@ -156,11 +177,103 @@
         return self;
     };
 }
+
+- (UIButton *(^)(UIColor *bgImgColor))k_bgImgColor {
+    return ^id(UIColor *bgImgColor) {
+        return self.k_bgImgColor_state(bgImgColor, UIControlStateNormal);
+    };
+}
+- (UIButton *(^)(UIColor *bgImgColor, UIControlState state))k_bgImgColor_state {
+    return ^id(UIColor *bgImgColor, UIControlState state) {
+        
+        CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextSetFillColorWithColor(context, [bgImgColor CGColor]);
+        CGContextFillRect(context, rect);
+        UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return self.k_bgImg_state(theImage, state);
+    };
+}
 - (UIButton *(^)(UIImage *backgroudImg, UIControlState state))k_bgImg_state {
     return ^id(UIImage *img, UIControlState state) {
         if (img) {
             [self setBackgroundImage:img forState:state];
         }
+        return self;
+    };
+}
+
+- (UIButton *(^)(MKButtonEdgeInsetsStyle style, CGFloat space))k_style_space {
+    return ^id(MKButtonEdgeInsetsStyle style, CGFloat space) {
+        /**
+         *  前置知识点：titleEdgeInsets是title相对于其上下左右的inset，跟tableView的contentInset是类似的，
+         *  如果只有title，那它上下左右都是相对于button的，image也是一样；
+         *  如果同时有image和label，那这时候image的上左下是相对于button，右边是相对于label的；title的上右下是相对于button，左边是相对于image的。
+         */
+        
+        // 1. 得到imageView和titleLabel的宽、高
+        CGFloat imageWith = self.imageView.frame.size.width;
+        CGFloat imageHeight = self.imageView.frame.size.height;
+        
+        CGFloat labelWidth = 0.0;
+        CGFloat labelHeight = 0.0;
+        if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+            // 由于iOS8中titleLabel的size为0，用下面的这种设置
+            labelWidth = self.titleLabel.intrinsicContentSize.width;
+            labelHeight = self.titleLabel.intrinsicContentSize.height;
+        } else {
+            labelWidth = self.titleLabel.frame.size.width;
+            labelHeight = self.titleLabel.frame.size.height;
+        }
+        
+        // 2. 声明全局的imageEdgeInsets和labelEdgeInsets
+        UIEdgeInsets imageEdgeInsets = UIEdgeInsetsZero;
+        UIEdgeInsets labelEdgeInsets = UIEdgeInsetsZero;
+        
+        // 3. 根据style和space得到imageEdgeInsets和labelEdgeInsets的值
+        switch (style) {
+            case MKButtonEdgeInsetsStyleTop:
+            {
+                imageEdgeInsets = UIEdgeInsetsMake(-labelHeight-space/2.0, 0, 0, -labelWidth);
+                labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith , -imageHeight-space/2.0, 0);
+            }
+                break;
+            case MKButtonEdgeInsetsStyleLeft:
+            {
+                imageEdgeInsets = UIEdgeInsetsMake(0, -space/2.0, 0, space/2.0);
+                labelEdgeInsets = UIEdgeInsetsMake(0, space/2.0, 0, -space/2.0);
+            }
+                break;
+            case MKButtonEdgeInsetsStyleBottom:
+            {
+                imageEdgeInsets = UIEdgeInsetsMake(0, 0, -labelHeight-space/2.0, -labelWidth);
+                labelEdgeInsets = UIEdgeInsetsMake(-imageHeight-space/2.0, -imageWith, 0, 0);
+            }
+                break;
+            case MKButtonEdgeInsetsStyleRight:
+            {
+                imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth+space/2.0, 0, -labelWidth-space/2.0);
+                labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith-space/2.0, 0, imageWith+space/2.0);
+            }
+                break;
+            default:
+                break;
+        }
+        
+        // 4. 赋值
+        self.titleEdgeInsets = labelEdgeInsets;
+        self.imageEdgeInsets = imageEdgeInsets;
+        
+        return self;
+    };
+}
+
+- (UIButton *(^)(CGFloat topbottomPadding, CGFloat leftrightPadding))k_padding {
+    return ^id(CGFloat topbottomPadding, CGFloat leftrightPadding) {
+        self.contentEdgeInsets = UIEdgeInsetsMake(topbottomPadding, leftrightPadding, topbottomPadding, leftrightPadding);
         return self;
     };
 }

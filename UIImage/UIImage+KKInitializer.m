@@ -24,7 +24,12 @@
     };
 }
 
-+ (UIImage *(^)(UIColor *imgFillColor, CGSize imgSize))k_imgFillColor {
++ (UIImage *(^)(UIColor *imgFillColor))k_imgFillColor {
+    return ^id(UIColor *img_color) {
+        return UIImage.k_imgFillColor_size(img_color, CGSizeMake(100, 50));
+    };
+}
++ (UIImage *(^)(UIColor *imgFillColor, CGSize imgSize))k_imgFillColor_size {
     return ^id(UIColor *img_color, CGSize imgSize) {
         CGRect rect = CGRectMake(0.0f, 0.0f, imgSize.width, imgSize.height);
         UIGraphicsBeginImageContext(rect.size);

@@ -16,6 +16,10 @@
 + (instancetype)k_labelWithFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
     return [self k_labelWithText:nil fontSize:fontSize textColor:textColor];
 }
++ (instancetype)k_labelWithMediumFontSize:(CGFloat)fontSize
+                                textColor:(UIColor *)textColor {
+    return [self k_labelWithText:nil mediumFontSize:fontSize textColor:textColor];
+}
 + (instancetype)k_labelWithBoldFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
     return [self k_labelWithText:nil boldFontSize:fontSize textColor:textColor];
 }
@@ -26,6 +30,12 @@
 ///  常用包含Text的Label
 + (instancetype)k_labelWithText:(NSString *)text fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
     UIFont *font = [UIFont systemFontOfSize:fontSize];
+    return [self k_labelWithText:text font:font textColor:textColor];
+}
++ (instancetype)k_labelWithText:(NSString *)text
+                    mediumFontSize:(CGFloat)fontSize
+                      textColor:(UIColor *)textColor {
+    UIFont *font = [UIFont systemFontOfSize:fontSize weight:UIFontWeightMedium];
     return [self k_labelWithText:text font:font textColor:textColor];
 }
 + (instancetype)k_labelWithText:(NSString *)text boldFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor {
@@ -51,8 +61,9 @@
 
 ///  全部参数构造器
 + (instancetype)k_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)alignment cornerRadius:(CGFloat)cornerRadius {
+    UILabel *l = UILabel.k_init();
     
-    return UILabel.k_init().k_text(text).k_font(font).k_textColor(textColor).k_textAlignment(alignment).k_cornerRadius(cornerRadius);
+    return l.k_text(text).k_font(font).k_textColor(textColor).k_textAlignment(alignment).k_cornerRadius(cornerRadius);
 }
 
 + (UILabel *(^)(void))k_init {
@@ -81,6 +92,11 @@
 - (UILabel *(^)(CGFloat   fontSize))    k_fontSize {
     return ^id(CGFloat fontSize) {
         return self.k_font([UIFont systemFontOfSize:fontSize]);
+    };
+}
+- (UILabel *(^)(CGFloat   mediumFontSize))    k_mediumFontSize {
+    return ^id(CGFloat mediumFontSize) {
+        return self.k_font([UIFont systemFontOfSize:mediumFontSize weight:UIFontWeightMedium]);
     };
 }
 - (UILabel *(^)(CGFloat   boldFontSize))k_boldFontSize {

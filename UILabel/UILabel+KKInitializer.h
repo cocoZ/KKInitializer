@@ -15,7 +15,8 @@
 ///  常用不包含Text的构造器
 + (instancetype)k_labelWithFontSize:(CGFloat)fontSize
                            textColor:(UIColor *)textColor;
-
++ (instancetype)k_labelWithMediumFontSize:(CGFloat)fontSize
+                               textColor:(UIColor *)textColor;
 + (instancetype)k_labelWithBoldFontSize:(CGFloat)fontSize
                                textColor:(UIColor *)textColor;
 
@@ -26,7 +27,9 @@
 + (instancetype)k_labelWithText:(NSString *)text
                         fontSize:(CGFloat)fontSize
                        textColor:(UIColor *)textColor;
-
++ (instancetype)k_labelWithText:(NSString *)text
+                    mediumFontSize:(CGFloat)fontSize
+                       textColor:(UIColor *)textColor;
 + (instancetype)k_labelWithText:(NSString *)text
                     boldFontSize:(CGFloat)fontSize
                        textColor:(UIColor *)textColor;
@@ -55,6 +58,7 @@
 - (UILabel *(^)(CGRect frame))          k_frame;
 - (UILabel *(^)(NSString *text))        k_text;
 - (UILabel *(^)(CGFloat   fontSize))    k_fontSize;
+- (UILabel *(^)(CGFloat   mediumFontSize))    k_mediumFontSize;
 - (UILabel *(^)(CGFloat   boldFontSize))k_boldFontSize;
 - (UILabel *(^)(UIFont   *font))        k_font;
 - (UILabel *(^)(UIColor  *textColor))   k_textColor;
