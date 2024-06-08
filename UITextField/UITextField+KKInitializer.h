@@ -17,6 +17,7 @@
 - (UITextField *(^)(NSString *text))k_text;
 - (UITextField *(^)(NSString *placeholder))k_placeholder;
 - (UITextField *(^)(UIColor *textColor))k_textColor;
+- (UITextField *(^)(UIColor *placeholderTextColor, NSString *placeholder))k_placeholderTextColor;
 
 ///  systom font
 - (UITextField *(^)(CGFloat fontSize))k_fontSize;

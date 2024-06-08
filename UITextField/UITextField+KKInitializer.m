@@ -48,6 +48,15 @@
         return self;
     };
 }
+- (UITextField *(^)(UIColor *placeholderTextColor, NSString *placeholder))k_placeholderTextColor {
+    return ^id(UIColor *placeholderTextColor, NSString *placeholder) {
+        if (placeholderTextColor) {
+            self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName : placeholderTextColor}];
+        }
+        return self;
+    };
+}
+
 - (UITextField *(^)(CGFloat))k_fontSize {
     return ^id(CGFloat fontSize) {
         UIFont *font = [UIFont systemFontOfSize:fontSize];
