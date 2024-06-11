@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
     s.name         = "KKInitializer"
-    s.version      = "1.0.5"
+    s.version      = "1.0.7"
     s.summary      = "链式语法式基础控件的便利构造器，包含UILabel、UIButton、UIImage、UITextField、UITextView、UIColor等"
 
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
     s.license      = "MIT"
     s.author       = { "cocoa" => "cocoa.zkk@foxmail.com" }
 
-    s.ios.deployment_target = "8.2"
+    s.ios.deployment_target = "12.0"
     s.requires_arc = true
     s.source       = { :git => "https://github.com/cocoZ/KKInitializer.git", :tag => s.version }
 
